@@ -15,7 +15,7 @@ const updateIndex = (target, destination, mode, prefix, suffix) => {
             (mode === 'FILE' && stat.isFile() && info.ext === '.js' && info.name !== 'index') ||
             (mode === 'FOLDER' && stat.isDirectory())
         ) {
-            acceptList[(prefix || '') + info.name + (suffix || '')] = (path.relative(target, destination) || '.').replace(/\\/g, '/') + '/' + child;
+            acceptList[(prefix || '') + info.name + (suffix || '')] = './' + (path.relative(destination, target) || '.').replace(/\\/g, '/') + '/' + info.name;
         }
     }
 
