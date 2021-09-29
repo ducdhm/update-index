@@ -1,3 +1,6 @@
+# DEPRECATED
+ * `update-index` is deprecated now. Please use `@dudojs/update-index` instead.
+
 # update-index
 A utility to create/update `index.js` file
 
